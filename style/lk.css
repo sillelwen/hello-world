@@ -1,0 +1,807 @@
+body {
+	max-width: 800px;
+	min-width: 360px;
+	margin: auto;
+	font-family: open sans, sans serif, verdana, tahoma, arial;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: max-content max-content auto max-content;
+}
+body.wide {
+	max-width: 1100px;
+}
+
+a:link {
+	color: #3e173e;
+	text-decoration: none;
+}
+
+a:hover, a[download] {
+	color: #e35a0f;
+}
+
+div#header {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	padding: 0px 1px;
+	grid-column-gap: 3px;
+}
+
+div#header a#logo {
+	display: block;
+	min-height: 100px;
+	max-height: 150px;
+	min-width: 150px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-image: url('/style/i/logo_001.png');
+	background-size: contain;
+}
+
+a#logo.logo_local::after, a#logo.logo_test::after {
+color: white;
+font-weight: 900;
+font-size: 1.1em;
+opacity: 90%;
+white-space: pre;
+text-align: center;
+vertical-align: middle;
+display: inline-block;
+height: 100%;
+width: 100%;
+}
+
+
+a#logo.logo_local::after {
+background-color: #3e173e;
+content: '\26A0\AЛокальный\Aстенд\A\26A0';
+}
+
+
+a#logo.logo_test::after {
+background-color: #e35a0f;
+content: '\26A0\AТестовый\Aстенд\A\26A0';
+}
+
+div#header div.contacts {
+	white-space: nowrap;
+	text-align: right;
+	flex: 1;
+	align-self: center;
+}
+div#header div#contacts_flex_container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+div#footer {
+	background-color: #3e173e;
+	background-color: #aaaaaa;
+	color: white;
+	text-align: right;
+	padding: 0px 3px;
+}
+
+div#navpane {
+	background-color: #aaaaaa;
+	color: white;
+	display: grid;
+	grid-template-columns: max-content auto max-content;
+	text-align: center;
+	padding: 0px 3px;
+}
+
+div#navpane div:last-child {
+	text-align: right;
+}
+
+div#navpane div:first-child {
+	text-align: left;
+}
+
+div#navpane a {
+	color: white;
+}
+
+table, p, h3, form {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h3 {
+	background-color: #e35a0f;
+	border-bottom: 8px solid #3e173e;
+	--background-image: url('/style/i/banner_001.jpg');
+	color: white;
+	font-size: 2em;
+	vertical-align: middle;
+	padding: 5px 0px;
+	font-weight: normal;
+}
+h4 {
+	background-color: #e35a0f;
+	border-bottom: 4px solid #3e173e;
+	color: white;
+	font-size: 1em;
+	padding: 0px 5px;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+h5 {
+	background-color: #e35a0f;
+	color: white;
+	font-size: 1em;
+	padding: 0px 5px;
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+h3:first-of-type {
+	margin-top: 0;
+}
+
+input, textarea, select {
+	outline:0;
+	--appearance: none;
+	box-shadow: none;
+	border: 1px solid #aaa;
+}
+
+input:invalid, textarea:invalid {
+    border-color: #e35a0f;
+}
+
+input:focus, textarea:focus, select:focus {
+	border: 1px solid #3e173e;
+}
+input[readonly], textarea[readonly] {
+	outline:0;
+	--appearance: none;
+	box-shadow: none;
+	background-color: #f0f0f0;
+	border: 1px solid #aaa;
+}
+
+input[type="submit"], input[type="button"] {
+	min-width: 150px;
+	min-height: 40px;
+	background-color: #e35a0f;
+	color: white;
+	margin: 15px 0px;
+	font-size: 14pt;
+	border-radius: 10px;
+	border: none;
+	align-self: center;
+}
+
+button, a.button {
+	background-color: #e35a0f;
+	color: white;
+	margin: 0px;
+	font-size: 13pt;
+	border: none;
+	outline-color: #3e173e;
+}
+
+div.buttongroup {
+	display: grid;
+	grid-column-gap: 5px;
+	grid-auto-flow: column;
+	grid-auto-columns: min-content;
+	grid-template-rows: 1fr;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+}
+div.buttongroup button, button.print, button.addnew, button.filter, button.export, button.columns, button.edit, button.delete, button.restore, button.statuses, a.button {
+	background-size: auto 20px;
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	padding: 5px 5px 5px 30px;
+}
+button[notext] {
+	padding-left: 25px;
+}
+div.valueslist div.buttongroup button {
+	padding: 0px;
+	text-align: center;
+	vertical-align: middle;
+	height: 25px; width: 25px;
+}
+div.buttongroup button.grey, button.grey, div.buttongroup button[disabled] {
+	background-color: #aaaaaa;
+}
+button.print, a.button.print {
+	background-image: url('i/printer_icon_001.png');
+}
+button.addnew {
+	background-image: url('i/add_new_001.png');
+}
+button.filter {
+	background-image: url('i/filter_001.png');
+}
+button.export {
+	background-image: url('i/excel_002.png');
+}
+button.columns {
+	background-image: url('i/columns_001.png');
+}
+button.edit {
+	background-image: url('i/edit_001.png');
+}
+button.delete {
+	background-image: url('i/delete_001.png');
+}
+button.restore {
+	background-image: url('i/restore_002.png');
+}
+button.statuses {
+	background-image: url('i/status_001.png');
+}
+button:before, a.button:before {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+
+input[type="search"] {
+		font-size: 11.5pt;
+}
+input[type="submit"].search {
+	margin:0; min-height:0px; min-width:0px; border-radius: 0px; font-size: 13pt;
+}
+td[colspan="2"] {
+	text-align:center;
+}
+ul, li {
+	text-align: left;
+}
+
+div.logos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+div.logo {
+	min-width: 150px;
+	flex: 1 300px;
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	background-size: auto 150px;
+	padding: 170px 10px 10px 10px;
+	text-align: center;
+}
+div.logo:hover,
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, input[type="submit"]:hover {
+	filter: brightness(130%);
+}
+
+div.logo.webform {
+	background-image: url('/style/i/webform_001.png');
+}
+div.logo.excel {
+	background-image: url('/style/i/excel_001.png');
+}
+div.logo.addregisterline {
+	background-image: url('/style/i/box_001.png');
+}
+div.logo.addregister {
+	background-image: url('/style/i/excel_001.png');
+}
+div.logo.closedate {
+	background-image: url('/style/i/close_date_001.png');
+}
+div.logo.listregisters {
+	background-image: url('/style/i/webform_002.png');
+}
+div.logo.listregisters2 {
+	background-image: url('/style/i/webform_003.png');
+}
+div.logo.settings {
+	background-image: url('/style/i/settings_002.png');
+}
+div.logo.user_settings {
+	background-image: url('/style/i/user_settings_001.png');
+}
+div.logo.users {
+	background-image: url('/style/i/users_003.png');
+}
+div.logo.admin {
+	background-image: url('/style/i/admin_002.png');
+}
+div.logo.directories {
+	background-image: url('/style/i/directory_001.png');
+}
+div.logo.log {
+	background-image: url('/style/i/log_001.png');
+}
+
+table.register {
+	--width: 100%;
+	font-size: 8pt;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+table.register thead tr {
+	background-color: #3e173e;
+	color: white;
+	vertical-align: top;
+}
+table.register thead a {
+	color: #e35a0f;
+}
+table.register th {
+	border: 1px solid grey;
+	text-align: center;
+}
+table.register td {
+	padding: 0;
+	border: 1px dotted grey;
+	overflow-wrap: break-word;
+}
+table.register th, table.register td, table.register td input, table.register td textarea {
+	max-width: 100px;
+	font-size: 8pt;
+}
+
+table.register tr.deleted td {
+	text-decoration: line-through;
+	color: #cccccc;
+}
+
+table.register input, table.register textarea {
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	border: none;
+	text-align: center;
+}
+
+input.short {
+	width: 40px;
+}
+input.medium {
+	width: 100px;
+}
+
+textarea {
+	resize: vertical;
+	overflow: auto;
+}
+
+/*table.register td input[type="text"], table.register td textarea {
+	height: 29pt;
+	vertical-align: middle;
+}
+*/
+table.list {border-spacing: 0; font-size: 11pt;}
+table.list table.list {margin-left: 0};
+table.list tr {vertical-align: top;}
+table.list td {border-top: 1px dotted grey;}
+table.list tr td[colspan="2"]:only-child {border-top: none;}
+table.list td, table.list th{padding: 2px; text-align: left;}
+/*table.list tr>*:first-child {padding: 7px 20px 7px 7px;}*/
+table.list tbody tr:hover {background-color: #f0f0f0;}
+table.list td form {text-align: left;}
+
+table.list.register td, table.list.register th {
+	padding: 5px;
+}
+
+div.tableformpart {
+	display: flex;
+	/*min-height: 270px;*/
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+	justify-content: space-between;
+}
+
+div.tableformpart .gridform, div.valueslist {
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	grid-gap: 10px;
+	grid-auto-rows: min-content;
+	text-align: left;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+div.valueslist.advanced {
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	grid-gap: 10px;
+	grid-auto-rows: min-content;
+	text-align: left;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+
+form[name="searchbox"] {
+	margin-bottom: 15px;
+}
+
+form.filterform[name="filterform"], form.filterform div.valueslist {
+	border: 1px solid #e35a0f;
+	border-radius: 10px;
+}
+
+form.filterform[name="frmFilter"] div.valueslist {
+	padding-bottom: 7px;
+}
+form.filterform div.valueslist h4 {
+	border-radius: 10px 10px 0 0;	
+}
+form.filterform div.valueslist input[type="submit"] {
+	margin: 0;
+	border-radius: 0 0 10px 10px;
+}
+
+div.valueslist div{
+	text-align: left;
+}
+div.valueslist h4 {
+	grid-column: 1/span 2;
+	margin: 0;
+}
+
+div.valueslist.advanced h4 {
+	grid-column: 1/span 3;
+}
+.valueslist.advanced input[type="submit"]  {
+	grid-column: 1 / span 3;
+}
+
+div.tableformpart .gridform h4,
+	.gridform input[type="submit"]  {
+	grid-column: 1 / span 2;
+	text-align: center;
+	column-span: all;
+}
+div.tableformpart .gridform	div.valueslist {
+	grid-column: 2;
+	justify-self: left;
+}
+div.tableformpart .gridform input[type="submit"] {
+	justify-self: center;
+}
+
+table td, table th, table td p, div.tableformpart .gridform h4 {
+	text-align: left;
+	vertical-align: top;
+	margin: auto 0;
+}
+
+div.valueslist:only-child {
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+}
+div.tableformpart > h4, hr {
+	width: 100%;
+}
+
+div.tableformpart table {
+	flex: 1 400px;
+}
+
+
+div.tableformpart tr td:only-child {
+	height: 100%;
+}
+
+div.tableformpart tr td:only-child textarea {
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+div.tableformpart table th, table.tableformpart th, div.tableformpart .gridform h4  {
+	background-color: #3e173e;
+	color: white;
+	border: none;
+}
+div.tableformpart table thead td, table.tableformpart thead td {
+	font-weight: bold;
+}
+div.tableformpart table tbody tr:nth-child(odd) {
+	background-color: #f0f0f0;
+}
+
+input[type="number"] {
+	text-align: right;
+}
+
+form sup, form star {
+	color: #e35a0f;
+}
+
+ td.valuefield {
+	 background-color: white;
+	 border-bottom: 1px solid #d8d8d8;
+	 padding-left: 10px;
+ }
+ 
+ p.message {
+	 color: #e35a0f;
+ }
+ div.message {
+	 z-index: 3;
+	 position: fixed;
+	 bottom:0;
+	 left:0;
+	 width: 100%;
+	 background-color: #e35a0f;
+ }
+ div.message p.message {
+	 color: white;
+	 font-weight: bold;
+ }
+ 
+ input.settingvalue {
+	width: 100%;
+ }
+ 
+ form#statusform {
+	 display: none;
+ }
+ 
+ form.filterform {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	overflow: hidden;
+	height: auto;
+	max-height: 800px;
+	transition: max-height 1s ease-in-out 0s;
+ }
+ form.filterform.hidden {
+	 max-height: 0;
+	 border: none;
+	 margin: 0;
+	 padding: 0;
+ }
+ 
+ form.filterform fieldset {
+	flex: 1 150px;
+	text-align: left;
+	border: 1px dashed #aaa;
+ }
+ div.fieldset {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-auto-rows: auto;
+	grid-gap: 5px;
+	align-content: center;
+	justify-content: space-between;
+ }
+ div.fieldset input[type="button"],
+ div.fieldset input[type="submit"] {
+	 grid-column-end: span 2;
+	 margin: 0;
+ }
+div.paginating {
+	display: grid;
+	align-items: center;
+	justify-items: end;
+	grid-column-gap: 10px;
+	grid-template-columns: min-content auto;
+}
+div.paginating.print {	
+	grid-template-columns: min-content auto min-content;
+	grid-auto-flow: column;
+	grid-auto-columns: auto;
+}
+ div.pages {
+	 float: right;
+ }
+ select.rowscount {
+	 align-self: stretch;
+ }
+ 
+ th.checkrow, table.list.register td.checkedrow, table.list.register td.checkrow{
+	 width: 14px;
+	 padding: 0;
+	 text-align: center;
+	 font-size: 1.7em;
+	 margin: 0;
+ }
+ 
+ td.checkrow::after {
+	 content: '\2610';
+ }
+ tr.checked td.checkrow::after {
+	 content: '\2611';
+ }
+ 
+ tr.checked {
+	 background-color: rgba(227, 90, 15, 0.2);/*#F1A075;*/
+ }
+ tr.checked:hover, table.list.register tr.checked:hover {
+	 background-color: rgba(227, 90, 15, 0.3);/*#F18348;*/
+ }
+ span.currentpage {
+	 color: #e35a0f;
+	 font-weight: bold;
+ }
+ 
+ th div.sortH {
+	 display: grid;
+	 grid-template-columns: auto min-content min-content;
+ }
+ 
+ .sortArrow {
+	 --font-size: 1.2em;
+	 --align-self: start;
+ }
+ 
+ table.list td.number {
+	 text-align: right;
+ }
+ 
+ .grey {
+	 color: grey;
+ }
+ td.nocenter {
+	 text-align: left;
+ }
+ 
+ .span2,  div.tableformpart .gridform div.valueslist.span2 {
+	grid-column: span 2;
+ }
+ 
+ 
+ hr {
+	border-style: dashed;
+	color: #3e173e;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\25CF";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #e35a0f; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+ul li:hover::before {
+  color: #3e173e;
+}
+
+div.dialogContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+	background-color: rgba(126, 126, 126, 0.45);
+	display: none;
+}
+div.dialogContainer::before {
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	content: '';
+}
+
+div.dialogContainer.show {
+	display: block;
+}
+	
+
+.dialog {
+	display: none;
+    vertical-align: middle;
+	background-color: white;
+	grid-template-columns: repeat(2, max-content);
+    grid-auto-rows: min-content;
+	grid-gap: 10px;
+    justify-content: center;
+	padding: 10px;
+	border: 1px solid #e35a0f;
+	margin: auto;
+	border-radius: 10px;
+	text-align: left;
+	margin-bottom: 15px;
+	width: fit-content; 
+}
+.dialog.show {
+    display: inline-grid;
+}
+.dialog h4, .dialog p, .dialog input[type="submit"], .dialog input[type="button"] {
+	display: block;
+	grid-column: span 2;
+	margin: 0;
+}
+ button.closebutton {
+	 display: inline-block;
+	 float: right;
+	 padding: 1px;
+ }
+  button.closebutton::before {
+	 content: '\274C';
+ }
+ 
+ 
+table.matrix {
+    border-spacing: 0;
+    overflow: hidden;
+    z-index: 1;
+	border-top: 1px dotted black;
+	border-left: 1px dotted black;
+}
+
+div.tableformpart table.matrix td {
+	text-align: center;
+	vertical-align: middle;
+}
+div.tableformpart table.matrix td,
+div.tableformpart table.matrix th {
+	border-bottom: 1px dotted black;
+	border-right: 1px dotted black;
+    position: relative;
+	font-size: small;
+}
+div.tableformpart table.matrix th {
+	color: black;
+	background-color: white;
+}
+div.tableformpart table.matrix tbody tr:nth-child(odd) {
+	background-color: transparent;
+}
+div.tableformpart table.matrix tbody tr:hover {
+	 background-color: rgba(227, 90, 15, 0.2);
+ }
+div.tableformpart table.matrix td:hover::after { 
+    background-color: rgba(227, 90, 15, 0.2);
+    content: '';  
+    height: 10000px;    
+    left: 0;
+    position: absolute;  
+    top: -5000px;
+    width: 100%;
+    z-index: -1;        
+}
+
+select option[selected] {
+	background-color: rgba(227, 90, 15, 0.2);
+}
+
+input.closedate {
+	font-size: 2em;
+	margin: 0 10px;
+	align-self: center;
+	justify-self: center;
+}
+ 
+/*Для IE*/ 
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.dialog.show {
+		position: absolute;
+		left: 300px;
+		top: 300px;
+		display: block;
+	}
+}

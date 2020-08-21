@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+		<style>
+table.waybill {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 3.5mm;
+	border-collapse: collapse;
+	width: 19cm;
+	border-spacing: 0;
+}
+table.waybill tr {
+	vertical-align: bottom;
+}
+table.waybill td {
+	border: 3px double black;
+	padding-top: 1.5mm;
+	padding-left: 2.5mm;
+	padding-right: 2.5mm;
+}
+table.waybill tr:first-child td {
+	border-top: 2px solid black;
+}
+table.waybill tr:last-child td {
+	border-bottom: 2px solid black;
+}
+table.waybill tr td:first-child {
+	border-left: 2px solid black;
+}
+table.waybill tr td:last-child {
+	border-right: 2px solid black;
+}
+table.waybill td.small {
+	font-size: 3.2mm;
+}
+table.waybill td.date {
+	text-align: right;
+}
+table.waybill td.nr {
+	font-size: 6.4mm;
+	font-weight: bold;
+	padding-left: 5mm;
+}
+table.waybill td.sum {
+	text-align: right;
+}
+table.waybill td.sum big {
+	font-size: 5.6mm;
+	font-weight: bold;
+}
+table.waybill td[colspan="6"] {
+	font-weight: bold;
+	font-size: 4.2mm;
+}
+table.waybill *.bold {
+	border: 2px solid black;
+}
+table.waybill tr.high {
+	height: 16mm;
+}
+table.waybill tr.high td {
+	border-bottom: 2px solid black;
+}
+table.waybill tr td.nospace {
+	padding-left: 1mm;
+	padding-right: 1mm;
+}
+		</style>
+	</head>
+	<body>
+	<table class="waybill">
+		<thead>
+			<col width="17%"/>
+			<col width="13%"/>
+			<col width="19%"/>
+			<col width="17%"/>
+			<col width="17%"/>
+			<col width="17%"/>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="date">21.02.2020</td>
+				<td colspan="2">&nbsp;</td>
+				<td colspan="3" class="small">Бланк отправления КС Дедал-Экспресс 7800-015267</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="nr">7800-015267</td>
+				<td>Контакты службы доставки</td>
+				<td colspan="3">+7 (911) 219-49-16<br/>logist@dedal-express.ru</td>
+			</tr>
+			<tr>
+				<td colspan="6">
+					ОТ КОГО (отправитель)
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">Наименование компании-отправителя</td>
+				<td colspan="4">ООО "Петек"</td>
+			</tr>
+			<tr>
+				<td>Регион</td>
+				<td colspan="2">Санкт-Петербург</td>
+				<td class="nospace">Город/нас. пункт</td>
+				<td colspan="2">Санкт-Петербург</td>
+			</tr>
+			<tr>
+				<td colspan="2">Адрес отправителя</td>
+				<td colspan="4">ул. Ватутина, д. 8/7, литера Д, помещение 105</td>
+			</tr>
+			<tr><td colspan="6"></td></tr>
+			<tr>
+				<td colspan="4">Заказ сформирован, данные о заказе и о получателе указаны верно</td>
+				<td class="date">Дата</td>
+				<td class="date">21.02.2020</td>
+			</tr>
+			<tr class="high">
+				<td>ФИО представителя отправителя</td>
+				<td colspan="2">Крузенштерн И.Ф.</td>
+				<td>Подпись</td>
+				<td colspan="2">&nbsp;</td>
+			</tr>
+			<tr><td colspan="6" class="bold"></td></tr>
+			<tr>
+				<td colspan="6" class="bold">КОМУ (получатель)</td>
+			</tr>
+			<tr>
+				<td colspan="2">Наименование<br/>компании-получателя<br/>(для юрлиц)</td>
+				<td colspan="4">ООО "Солнечный город"</td>
+			</tr>
+			<tr>
+				<td colspan="2">ФИО получателя</td>
+				<td colspan="4">Лермонтов Михаил Юрьевич</td>
+			</tr>
+			<tr>
+				<td colspan="2">Телефон получателя</td>
+				<td colspan="4">8 (926) 6010733</td>
+			</tr>
+			<tr>
+				<td>Регион</td>
+				<td colspan="2">Москва</td>
+				<td class="nospace">Город/нас. пункт</td>
+				<td colspan="2">Москва</td>
+			</tr>
+			<tr>
+				<td colspan="2">Адрес получателя</td>
+				<td colspan="4">ул. Крымский Вал, 10, помещение 130</td>
+			</tr>
+			<tr class="high">
+				<td>Комментарий:</td>
+				<td colspan="5">Просьба отзвониться за час до доставки</td>
+			</tr>
+			<tr><td colspan="6" class="bold"></td></tr>
+			<tr>
+				<td colspan="6" class="bold">ИНФОРМАЦИЯ ОБ ОТПРАВЛЕНИИ</td>
+			</tr>
+			<tr>
+				<td colspan="2">Плановая дата доставки</td>
+				<td class="date">22.02.2020</td>
+				<td colspan="2">Плановый интервал доставки</td>
+				<td>09:00 — 14:00</td>
+			</tr>
+			<tr><td colspan="6"></td></tr>
+			<tr>
+				<td>Габариты</td>
+				<td></td>
+				<td>Вес, кг</td>
+				<td>10,0</td>
+				<td>Кол-во мест</td>
+				<td>2</td>
+			</tr>
+			<tr><td colspan="6"></td></tr>
+			<tr>
+				<td>Форма оплаты:</td>
+				<td colspan="2">Наличные</td>
+				<td class="sum"><strong>К оплате</strong></td>
+				<td class="sum" colspan="2"><big>4090,00</big> рублей</td>
+			</tr>
+			<tr><td colspan="6"></td></tr>
+			<tr>
+				<td colspan="4">Заказ получен, комплект и внешний вид товара проверен,<br/>претензий не имею</td>
+				<td class="date">Дата</td>
+				<td></td>
+			</tr>
+			<tr class="high bold">
+				<td>ФИО получателя</td>
+				<td colspan="2">Беллинсгаузен Ф.Ф.</td>
+				<td>Подпись</td>
+				<td colspan="2"></td>
+			</tr>
+		</tbody>
+	</table>
+	</body>
+</html>

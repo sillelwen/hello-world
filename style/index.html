@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width"/>
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<style>
+body {
+	text-align: center;
+	background-color: #a8a8a8;
+	margin: 0;
+	padding: 0;
+	font-family: Oswald, Impact, Arial, sans-serif;
+	font-weight: 700;
+}
+div#main {
+	height: 950px;
+	width: 950px;
+	background-color: white;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap:  10px;
+	align-content: space-between;
+	justify-content: space-between;
+}
+div.small {
+	background-color: #e3590e;
+	padding: 5px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 52px;
+	line-height: 62px;
+	text-align: right;
+	letter-spacing: 0px;
+	font-stretch: condensed;
+	padding-top: 40px;
+}
+div.small a {
+	text-decoration:none;
+	color: white;
+}
+div.big {
+	background: linear-gradient(45deg, #343434, #7b7b7b);
+	text-align: left;
+	font-size: 52px;
+	font-stretch: condensed;
+	color: #e3590e;	
+	text-transform: uppercase;
+	grid-column: 1 / 3;
+	grid-row: 2 / 4;
+}
+div.big img {
+	width: 100%;
+}
+div.big p {
+	margin: 30px 10px 30px 10px;
+}
+div.big p:last-of-type {
+	margin: 10px 10px;
+}
+div.big p.phone {
+	width: 100%;
+	white-space: nowrap;
+	font-size: 140px;
+	font-weight: 500;
+}
+div.big p.phone a {
+	text-decoration:none;
+	color: #e3590e;
+}
+div.orange_grad {
+	background: linear-gradient(90deg, #e3590e, #f0ab84);
+	color: #373737;
+}
+div.purple_orange {
+	background-color: #3d173e;
+	color: #e3590e;
+	padding-top: 20px;
+}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div class="small">
+				Петербург
+			</div>
+			<div class="small orange_grad">
+				650 км
+			</div>
+			<div class="small">
+				Москва
+			</div>
+			<div class="big">
+				<img src="http://lk.de-express.ru/style/i/logo_001.png"/>
+				<p class="phone">
+					<a href="tel:+781294920000">949-20-00</a>
+				</p>
+				<p>Работаем с 2004</p>
+			</div>
+			<div class="small purple_orange">
+				Быстрая<br/>
+				доставка<br/>
+				интернет<br/>
+				магазинам
+			</div>
+			<div class="small">
+				<a href="http://lk.de-express.ru">Личный кабинет</a>
+			</div>
+		</div>
+	</body>
+</html>
